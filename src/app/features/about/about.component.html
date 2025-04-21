@@ -1,0 +1,23 @@
+<section class="about-section">
+  <!--  Characters-->
+  <app-character-bubble
+    *ngFor="let character of characters"
+    [avatarSrc]="character.avatarSrc"
+    [text]="character.text"
+    [bubbleColor]="character.bubbleColor"
+    [position]="character.position"
+  ></app-character-bubble>
+
+<!--  Content-->
+  <div class="content">
+    <div class="scrollable-comments">
+      <p *ngFor="let comment of comments; let i = index">
+        {{ comment }}
+        <br>
+        <button *ngIf="i === comments.length - 1" class="load-page-btn">
+          Load page
+        </button>
+      </p>
+    </div>
+  </div>
+</section>

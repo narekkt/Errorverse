@@ -1,0 +1,16 @@
+@mixin transition($property) {
+  transition: $property;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin scale($value) {
+  transform: scale($value);
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}

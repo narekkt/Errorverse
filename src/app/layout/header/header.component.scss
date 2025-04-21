@@ -1,0 +1,76 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  .header-logo {
+    user-select: none;
+    flex: 1;
+  }
+
+  .header-logo h1, .header-nav a, .header-timezone {
+    font-family: 'SF Pro Rounded', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 1.7rem;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+
+      &.active {
+        font-weight: 600;
+      }
+
+      &:after {
+        content: '';
+        $size: 6px;
+        width: $size;
+        height: $size;
+        background: #000000;
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        margin-left: calc(-1 * $size / 2);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.3s cubic-bezier(0.610, 0.000, 0.405, 1.630);
+      }
+
+      &:hover:after {
+        transform: scale(1);
+      }
+
+      &:active:after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .header-timezone {
+    user-select: none;
+    flex: 1;
+    text-align: right;
+  }
+}

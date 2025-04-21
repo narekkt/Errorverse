@@ -1,0 +1,23 @@
+.character-bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+
+  .bubble {
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-family: 'SF Pro Rounded', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    white-space: nowrap;
+  }
+}
